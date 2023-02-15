@@ -1,6 +1,7 @@
 package config
 
 import (
+	"github.com/goravel/framework/validation"
 	"goravel/app/providers"
 
 	"github.com/goravel/framework/auth"
@@ -25,7 +26,7 @@ func Boot() {}
 
 func init() {
 	config := facades.Config
-	config.Add("app", map[string]interface{}{
+	config.Add("app", map[string]any{
 		// Application Name
 		//
 		// This value is the name of your application. This value is used when the
@@ -88,6 +89,8 @@ func init() {
 			&providers.ConsoleServiceProvider{},
 			&providers.QueueServiceProvider{},
 			&providers.EventServiceProvider{},
+			&validation.ServiceProvider{},
+			&providers.ValidationServiceProvider{},
 		},
 	})
 }

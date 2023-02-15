@@ -12,6 +12,6 @@ type Kernel struct {
 // These middleware are run during every request to your application.
 func (kernel *Kernel) Middleware() []http.Middleware {
 	return []http.Middleware{
-		middleware.Cors(),
+		middleware.Cors(), //全局添加跨域中间件
 	}
 }

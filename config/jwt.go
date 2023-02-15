@@ -12,7 +12,7 @@ func init() {
 		// Don't forget to set this in your .env file, as it will be used to sign
 		// your tokens. A helper command is provided for this:
 		// `go run . artisan jwt:secret`
-		"secret": config.Env("JWT_SECRET", ""),
+		"secret": config.Env("JWT_SECRET", "sdf456.4@d"),
 
 		// JWT time to live
 		//
@@ -23,7 +23,7 @@ func init() {
 		// Some people may want this behaviour for e.g. a mobile app.
 		// This is not particularly recommended, so make sure you have appropriate
 		// systems in place to revoke the token if necessary.
-		"ttl": config.Env("JWT_TTL", 60),
+		"ttl": config.Env("JWT_TTL", 120),
 
 		// Refresh time to live
 		//
